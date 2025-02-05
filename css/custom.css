@@ -1,0 +1,1045 @@
+.pattern_logo img {
+  max-width: 110px;
+  border-radius: 30%;
+}
+
+.pattern_logo {
+  width: 72px;
+  height: 72px;
+}
+
+.pattern-label {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.custom-pattern-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/*TITLES*/
+
+/*for now until theres just 1 h1 per page. Then change to 4xl*/
+h1 {
+  --pf-c-content--h1--FontSize: var(--pf-global--FontSize--3xl);
+}
+
+h2 {
+  --pf-c-content--h2--FontSize: var(--pf-global--FontSize--3xl);
+}
+
+h3 {
+  --pf-c-content--h3--FontSize: var(--pf-global--FontSize--2xl);
+}
+
+/* We need this one because patternfly sets this to 0, which
+/* creates a bunched-up effect that we don't want for the docs */
+
+.pf-c-content h1:first-child,
+.pf-c-content h2:first-child,
+.pf-c-content h3:first-child,
+.pf-c-content h4:first-child,
+.pf-c-content h5:first-child,
+.pf-c-content h6:first-child {
+  margin-top: revert;
+}
+
+.page-abstract {
+  margin-bottom: 1rem;
+}
+
+/*CODE BLOCKS */
+
+code {
+  font-family: var(--pf-global--FontFamily--monospace);
+}
+
+pre {
+  white-space: pre-wrap;
+  font-family: var(--pf-global--FontFamily--monospace);
+  font-size: 0.9rem;
+  background-color: #f0f0f0;
+  padding: var(--pf-global--spacer--md);
+  margin-bottom: var(--pf-global--spacer--md);
+  margin-top: var(--pf-global--spacer--md);
+}
+
+/* literals */
+
+p > code,
+td > code {
+  font-family: var(--pf-global--FontFamily--monospace);
+  background-color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+/*Adds type of content to listingblock*/
+
+.listingblock {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.listingblock > .pf-c-code-block {
+  position: relative;
+}
+
+.listingblock div[data-lang]::before {
+  content: attr(data-lang);
+  position: absolute;
+  font-size: 0.75em;
+  top: 0.425rem;
+  left: 0.5rem;
+  line-height: 2;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.5;
+}
+
+/*Changes to make the site white*/
+
+.pf-c-page__main-section {
+  background-color:  var(--pf-global--BackgroundColor--light-100)
+}
+
+.pf-c-card {
+  box-shadow: var(--pf-global--BoxShadow--md);
+}
+
+.pf-c-page__sidebar {
+  background-color: var(--pf-global--BackgroundColor--light-100);
+  border-right-style: solid;
+  border-width: 3px;
+  border-color:  #f3f3f3;
+}
+
+.pf-c-jump-links__link.pf-m-current,
+.pf-c-jump-links__link.pf-m-current:hover,
+.pf-c-jump-links__link.pf-m-current:not(.pf-m-expanded)
+.pf-c-nav__link {
+    color: var(--pf-c-nav__link--m-current--Color);
+    background-color: var(--pf-c-nav__link--m-current--BackgroundColor);
+}
+
+/*Makes nav items like accordion items*/
+/*Need this to unify the look of the pages*/
+
+.pf-c-nav__link {
+  padding-left: 16px;
+ --pf-c-nav__link--before--BorderBottomWidth: 0;
+ line-height: var(--pf-global--LineHeight--md);
+}
+
+.pf-c-nav__toggle {
+  padding-right: 0;
+}
+
+/*Make big titles less bold*/
+
+.pf-c-title.pf-m-4xl{
+  font-weight: var(--pf-global--FontWeight--light);
+}
+
+/*For the Patterns page */
+
+.pf-c-panel__header {
+  font-weight: bold ;
+}
+
+.filter-title {
+  margin-left: 1rem;
+}
+
+.reset-title {
+  margin-right: 1rem;
+  font-size: 0.75em;
+}
+
+.filter-title-div {
+  margin-top: 2rem;
+}
+
+/* This allows long names on nav items/accordions to wrap*/
+.wrappable {
+  white-space:break-spaces;
+  text-align: left
+}
+
+.pf-c-check__label {
+  font-size: 0.8rem;
+}
+
+.pattern-count-style {
+  font-size:0.8rem;
+}
+
+
+
+/*RIGTH NAV titles */
+
+.filter-title {
+  margin-left: 1rem;
+}
+
+.filter-title-div {
+  margin-top: 2rem;
+}
+
+.pf-c-select__menu {
+  box-shadow: 0 -0.25rem 0.25rem -0.375rem rgba(3, 3, 3, 0.72);
+}
+
+/*DESCRIPTION LIST*/
+
+/* Render description lists correctly */
+
+.pf-c-content dl {
+  display: block;
+}
+
+.pf-c-content dl.pattern-status {
+  display: grid;
+}
+
+.pf-c-content dt {
+  padding-top: 20px;
+}
+
+/*BLOCK TITLES*/
+
+/* Make block titles a little more distinctive */
+
+.pf-c-content .title {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+/*ACCORDIONS*/
+/*CSS from Bootstrap 5x, modified, and other custom classes*/
+
+/* This puts the accent on the open accordion*/
+.collapsed-effect:after {
+  border-color: var(--pf-global--active-color--100);
+  border-left-width: 1px;
+  border-style: solid !important;
+}
+
+.collapse:not(.show) {
+    display: none;
+}
+
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  @include transition($transition-collapse);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+
+button[aria-expanded=true] .fa-angle-right {
+  display: none;
+}
+button[aria-expanded=false] .fa-angle-down {
+  display: none;
+}
+
+.fas.fa-angle-right,
+.fas.fa-angle-down {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+}
+
+.collapsed-effect::after {
+  border-style: none;
+}
+
+.pf-c-label__icon {
+  margin-right: 0.5rem;
+}
+
+.pf-c-accordion__toggle {
+  padding: var(--pf-global--spacer--md) var(--pf-global--spacer--lg) var(--pf-global--spacer--md) var(--pf-global--spacer--md);
+}
+
+.pf-c-accordion__toggle-link {
+  padding: var(--pf-global--spacer--sm) var(--pf-global--spacer--md) var(--pf-global--spacer--sm) var(--pf-global--spacer--sm);
+}
+
+.pf-c-select__menu {
+  box-shadow: 0 -0.25rem 0.25rem -0.375rem rgba(3, 3, 3, 0.72);
+}
+
+
+/* Makes scrolling smooth when clicking links on the right*/
+
+main.pf-c-page__main {
+    scroll-behavior: smooth;
+}
+
+/*FOOTER*/
+
+.footer-center {
+  justify-content: center;
+}
+
+#footer {
+  background: var(--pf-global--BackgroundColor--dark-100) !important;
+}
+
+#prefooter {
+  background: var(--pf-global--BackgroundColor--dark-300) !important;
+}
+.footer-dark {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.footer-menu-title {
+   font-weight: bold;
+   font-size:0.9rem;
+}
+
+.site-copyright {
+    display: block;
+}
+
+.footer-link,
+.footer-link:hover {
+    color: white;
+}
+.prefooter-menu-grid {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.prefooter-icon {
+  padding-right: 5px;
+}
+
+/* Controls the height of the first footer's grid respect to the side box*/
+#prefooter .pf-u-py-xl {
+  padding-top: 5rem !important;
+  padding-bottom: 2rem !important;
+}
+
+/* This makes the main section to expand even if there's not enough content,
+/* so that the footer remains at the bottom of the page */
+
+.pf-c-page__main-section {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+/*This gives the content on the articles a white space a the bottom
+/*And also fixes how big this container is */
+.min-height {
+  max-width: 832px;
+  min-width: 832px;
+  padding-bottom: 5rem;
+}
+
+/* STICKY NAV ON THE LEFT */
+
+.sticky {
+  max-height: calc(100vh - 76px);
+  overflow-y: auto;
+  /* Hide TOC scrollbar IE, Edge & Firefox */
+  /*-ms-overflow-style: none;
+  scrollbar-width: none; */
+  order: 1;
+  padding: 40px var(--pf-global--spacer--lg) var(--pf-global--spacer--lg)
+    var(--pf-global--spacer--2xl);
+  /* flex-grow: 1; */
+  background: none;
+  margin: 0;
+  position: sticky;
+  top: 0;
+  min-width: 400px;
+  align-self: flex-start;
+  z-index: 501;
+}
+
+.active {
+  background-color: red;
+}
+
+/*SCROLLSPY*/
+
+body .pf-c-content {
+  position: relative;
+}
+
+/*This fixes scrollspy problem when scrolling up manually*/
+.pf-c-page__main-section {
+  padding-top: 0;
+  padding-left: 20px;
+}
+
+nav.ul.li.a {
+  font-size: 0.8rem;
+}
+
+/* Emphasizes that second levels in the toc are further inside*/
+aside ul ul {
+  margin-left: 20px !important;
+}
+/* Makes the font size smaller inside the TOC*/
+nav ul ul ul a {
+  font-size: 0.8rem !important;
+}
+
+.pf-c-jump-links__link {
+  padding-top: 0;
+  font-size: 0.9rem;
+  color: var(--pf-global--icon--Color--light);
+}
+.pf-c-jump-links__link:hover {
+  /*color: #06c;*/
+  color: var(--pf-global--link--Color--light);
+}
+/* Makes the font size smaller inside the TOC*/
+nav ul ul ul a  {
+    font-size: 0.8rem !important;
+
+}
+
+.pf-c-jump-links__link {
+    padding-top: 0;
+    font-size: 0.9rem;
+    color: var(--pf-global--icon--Color--light);
+}
+.pf-c-jump-links__link:hover {
+    /*color: #06c;*/
+    color: var(--pf-global--link--Color--light);
+}
+
+a code {
+    display: contents;
+    margin: 2px;
+    font-size: 0.8rem;
+    line-height: 20px;
+}
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+/* LISTS */
+ol,
+ul {
+  margin-top: var(--pf-c-list--nested--MarginTop) !important;
+  margin-left: var(--pf-c-list--nested--MarginLeft);
+}
+
+ul.pf-c-list {
+  list-style: var(--pf-c-list--ul--ListStyle);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* CALLOUTS with fontawesome*/
+
+.colist > table td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.conum[data-value] {
+  display: inline-block;
+  color: #f0f0f0 !important;
+  background-color: #394b54;
+  border-radius: 100px;
+  text-align: center;
+  width: 20px;
+  height: 20px;
+  font-size: 0.75rem;
+  line-height: 20px;
+  font-family: "Open Sans", "Sans", sans-serif;
+  font-style: normal;
+  text-indent: -1px;
+}
+
+.conum[data-value] * {
+  color: #f0f0f0 !important;
+}
+
+.conum[data-value] + b {
+  display: none;
+}
+
+.conum[data-value]:after {
+  content: attr(data-value);
+}
+
+pre .conum[data-value] {
+  text-shadow: 0 0;
+  position: relative;
+  top: -2px;
+}
+
+b.conum * {
+  color: inherit !important;
+}
+
+.conum:not([data-value]):empty {
+  display: none;
+}
+
+/* SEARCH */
+
+.pf-c-search-input__icon {
+  color: black;
+}
+
+#search {
+  padding-left: 16px;
+}
+
+#results h2 {
+  font-size: 1.40rem;
+}
+
+#results {
+    width: 80%;
+    margin: auto;
+}
+
+.search-breadcrumb {
+  margin-bottom: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* ADMONITONS with fontawesome */
+
+.admonitionblock > table {
+  border: 0;
+  background: none;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.admonitionblock > table td.icon {
+  vertical-align: top;
+  text-align: center;
+  width: 80px;
+}
+
+.admonitionblock > table td.content {
+  padding-right: 10px;
+  line-height: 1.8;
+}
+
+.admonitionblock.note {
+  background: #4e9fde15;
+  border-left: solid #4e9fde;
+}
+
+.admonitionblock td.icon .icon-note::before {
+  content: "\f05a";
+  color: #4e9fdd;
+}
+.admonitionblock.important {
+  background: #ee210015;
+  border-left: solid #ee2100;
+}
+.admonitionblock td.icon .icon-important:before {
+  content: "\f06a";
+  color: #e00;
+}
+
+.admonitionblock.warning {
+  background: #ec7a0915;
+  border-left: solid #ec7a09;
+}
+
+.admonitionblock td.icon .icon-warning:before {
+  content: "\f071";
+  color: #ec7a08;
+}
+
+.admonitionblock td.icon .icon-caution:before {
+  content: "\f06d";
+  color: #ec7a08;
+}
+
+.admonitionblock.caution {
+  background: #ec7a0915;
+  border-left: solid #ec7a09;
+}
+
+.admonitionblock.tip {
+  background: #32859615;
+  border-left: solid #328596;
+}
+
+.admonitionblock td.icon .icon-tip:before {
+  content: "\f0eb";
+  color: #2c8596;
+}
+.admonitionblock > table td.icon img {
+  max-width: none;
+}
+
+.admonitionblock > table td.icon .title {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.admonitionblock.note td.content:before {
+  content: "NOTE\a";
+  white-space: pre;
+  color: #404040;
+  font-weight: bold;
+}
+
+.admonitionblock.important td.content:before {
+  content: "IMPORTANT\a";
+  white-space: pre;
+  color: #404040;
+  font-weight: bold;
+}
+
+.admonitionblock.warning td.content:before {
+  content: "WARNING\a";
+  white-space: pre;
+  color: #404040;
+  font-weight: bold;
+}
+
+.admonitionblock.tip td.content:before {
+  content: "TIP\a";
+  white-space: pre;
+  color: #404040;
+  font-weight: bold;
+}
+
+.admonitionblock.caution td.content:before {
+  content: "CAUTION\a";
+  white-space: pre;
+  color: #404040;
+  font-weight: bold;
+}
+.admonitionblock td.icon [class^="fa icon-"] {
+  font-size: 2.5em;
+  cursor: default;
+  padding-top: 0.125em;
+}
+
+.fa {
+  font-weight: 400;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Rouge default highlights*/
+
+.highlight .hll {
+  background-color: #ffffcc;
+}
+.highlight .c {
+  color: #408080;
+  font-style: italic;
+} /* Comment */
+/* .highlight .err {
+  border: 1px solid #ff0000;
+} Error */
+.highlight .k {
+  color: #008000;
+  font-weight: bold;
+} /* Keyword */
+.highlight .o {
+  color: #666666;
+} /* Operator */
+.highlight .ch {
+  color: #408080;
+  font-style: italic;
+} /* Comment.Hashbang */
+.highlight .cm {
+  color: #408080;
+  font-style: italic;
+} /* Comment.Multiline */
+.highlight .cp {
+  color: #bc7a00;
+} /* Comment.Preproc */
+.highlight .cpf {
+  color: #408080;
+  font-style: italic;
+} /* Comment.PreprocFile */
+.highlight .c1 {
+  color: #408080;
+  font-style: italic;
+} /* Comment.Single */
+.highlight .cs {
+  color: #408080;
+  font-style: italic;
+} /* Comment.Special */
+.highlight .gd {
+  color: #a00000;
+} /* Generic.Deleted */
+.highlight .ge {
+  font-style: italic;
+} /* Generic.Emph */
+.highlight .gr {
+  color: #ff0000;
+} /* Generic.Error */
+.highlight .gh {
+  color: #000080;
+  font-weight: bold;
+} /* Generic.Heading */
+.highlight .gi {
+  color: #00a000;
+} /* Generic.Inserted */
+.highlight .go {
+  color: #888888;
+} /* Generic.Output */
+.highlight .gp {
+  color: #000080;
+  font-weight: bold;
+} /* Generic.Prompt */
+.highlight .gs {
+  font-weight: bold;
+} /* Generic.Strong */
+.highlight .gu {
+  color: #800080;
+  font-weight: bold;
+} /* Generic.Subheading */
+.highlight .gt {
+  color: #0044dd;
+} /* Generic.Traceback */
+.highlight .kc {
+  color: #008000;
+  font-weight: bold;
+} /* Keyword.Constant */
+.highlight .kd {
+  color: #008000;
+  font-weight: bold;
+} /* Keyword.Declaration */
+.highlight .kn {
+  color: #008000;
+  font-weight: bold;
+} /* Keyword.Namespace */
+.highlight .kp {
+  color: #008000;
+} /* Keyword.Pseudo */
+.highlight .kr {
+  color: #008000;
+  font-weight: bold;
+} /* Keyword.Reserved */
+.highlight .kt {
+  color: #b00040;
+} /* Keyword.Type */
+.highlight .m {
+  color: #666666;
+} /* Literal.Number */
+.highlight .s {
+  color: #ba2121;
+} /* Literal.String */
+.highlight .na {
+  color: #7d9029;
+} /* Name.Attribute */
+.highlight .nb {
+  color: #008000;
+} /* Name.Builtin */
+.highlight .nc {
+  color: #0000ff;
+  font-weight: bold;
+} /* Name.Class */
+.highlight .no {
+  color: #880000;
+} /* Name.Constant */
+.highlight .nd {
+  color: #aa22ff;
+} /* Name.Decorator */
+.highlight .ni {
+  color: #999999;
+  font-weight: bold;
+} /* Name.Entity */
+.highlight .ne {
+  color: #d2413a;
+  font-weight: bold;
+} /* Name.Exception */
+.highlight .nf {
+  color: #0000ff;
+} /* Name.Function */
+.highlight .nl {
+  color: #a0a000;
+} /* Name.Label */
+.highlight .nn {
+  color: #0000ff;
+  font-weight: bold;
+} /* Name.Namespace */
+.highlight .nt {
+  color: #008000;
+  font-weight: bold;
+} /* Name.Tag */
+.highlight .nv {
+  color: #19177c;
+} /* Name.Variable */
+.highlight .ow {
+  color: #aa22ff;
+  font-weight: bold;
+} /* Operator.Word */
+.highlight .w {
+  color: #bbbbbb;
+} /* Text.Whitespace */
+.highlight .mb {
+  color: #666666;
+} /* Literal.Number.Bin */
+.highlight .mf {
+  color: #666666;
+} /* Literal.Number.Float */
+.highlight .mh {
+  color: #666666;
+} /* Literal.Number.Hex */
+.highlight .mi {
+  color: #666666;
+} /* Literal.Number.Integer */
+.highlight .mo {
+  color: #666666;
+} /* Literal.Number.Oct */
+.highlight .sa {
+  color: #ba2121;
+} /* Literal.String.Affix */
+.highlight .sb {
+  color: #ba2121;
+} /* Literal.String.Backtick */
+.highlight .sc {
+  color: #ba2121;
+} /* Literal.String.Char */
+.highlight .dl {
+  color: #ba2121;
+} /* Literal.String.Delimiter */
+.highlight .sd {
+  color: #ba2121;
+  font-style: italic;
+} /* Literal.String.Doc */
+.highlight .s2 {
+  color: #ba2121;
+} /* Literal.String.Double */
+.highlight .se {
+  color: #bb6622;
+  font-weight: bold;
+} /* Literal.String.Escape */
+.highlight .sh {
+  color: #ba2121;
+} /* Literal.String.Heredoc */
+.highlight .si {
+  color: #bb6688;
+  font-weight: bold;
+} /* Literal.String.Interpol */
+.highlight .sx {
+  color: #008000;
+} /* Literal.String.Other */
+.highlight .sr {
+  color: #bb6688;
+} /* Literal.String.Regex */
+.highlight .s1 {
+  color: #ba2121;
+} /* Literal.String.Single */
+.highlight .ss {
+  color: #19177c;
+} /* Literal.String.Symbol */
+.highlight .bp {
+  color: #008000;
+} /* Name.Builtin.Pseudo */
+.highlight .fm {
+  color: #0000ff;
+} /* Name.Function.Magic */
+.highlight .vc {
+  color: #19177c;
+} /* Name.Variable.Class */
+.highlight .vg {
+  color: #19177c;
+} /* Name.Variable.Global */
+.highlight .vi {
+  color: #19177c;
+} /* Name.Variable.Instance */
+.highlight .vm {
+  color: #19177c;
+} /* Name.Variable.Magic */
+.highlight .il {
+  color: #666666;
+} /* Literal.Number.Integer.Long */
+
+/*  This is for the normal paragraphs
+// that don't get properly styled with other classes */
+div.paragraph {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* TABLES */
+
+table.tableblock tr > :first-child {
+  padding-left: 1rem;
+}
+
+table.tableblock tbody > tr > * {
+  overflow-wrap: break-word;
+  /* vertical-align: baseline; */
+}
+
+table.tableblock thead {
+  font-size: var(--pf-global--FontSize--sm);
+  vertical-align: bottom;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: none;
+}
+
+table.tableblock tr > * {
+  display: table-cell;
+  position: relative;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  padding: 24px;
+  overflow: visible;
+  text-overflow: clip;
+  word-break: normal;
+  white-space: normal;
+}
+
+/* border*/
+
+table.tableblock tr:not(.pf-c-table__expandable-row) {
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/*striped*/
+
+table.tableblock tbody tr:nth-child(odd) {
+  background: #f0f0f0;
+}
+
+/* TITLE ANCHORS */
+
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+  color: #06c;
+  visibility: visible;
+}
+
+h1 .anchor,
+h2 .anchor,
+h3 .anchor,
+h4 .anchor,
+h5 .anchor,
+h6 .anchor {
+  text-decoration: none;
+  width: 1.75ex;
+  margin-left: -1.5ex;
+  visibility: hidden;
+  font-size: 0.8em;
+  font-weight: 400;
+  padding-top: 0.05em;
+  display: inline-block;
+}
+h1 .anchor::before,
+h2 .anchor::before,
+h3 .anchor::before,
+h4 .anchor::before,
+h5 .anchor::before,
+h6 .anchor::before {
+  content: "\00a7";
+}
+
+/* CI Labels */
+
+.ci-label {
+  font-size: 0.8rem;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  display: flex;
+}
+
+.ci-label-environment-stable {
+  background-color: var(--pf-global--palette--black-700);
+  color: var(--pf-global--palette--white);
+  border-radius: 5px 0 0 5px;
+  padding: 0 5px;
+}
+
+.ci-label-environment-prerelease {
+  background-color: var(--pf-global--palette--black-600);
+  color: var(--pf-global--palette--white);
+  border-radius: 5px 0 0 5px;
+  padding: 0 5px;
+}
+
+.ci-label-branch-green {
+  background-color: var(--pf-global--success-color--100);
+  color: var(--pf-global--palette--white);
+  border-radius: 0 5px 5px 0;
+  padding: 0 5px;
+}
+
+.ci-label-branch-yellow {
+  background-color: var(--pf-global--palette--gold-500);
+  color: var(--pf-global--palette--white);
+  border-radius: 0 5px 5px 0;
+  padding: 0 5px;
+}
+
+.ci-label-branch-red {
+  background-color: var(--pf-global--danger-color--100);
+  color: var(--pf-global--palette--white);
+  border-radius: 0 5px 5px 0;
+  padding: 0 5px;
+}
+
+.ci-icon {
+}
+
+.pf-c-content ul.links-menu {
+  padding-left: 0;
+  margin-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.pf-c-content ul.pf-c-nav__list {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.pf-c-content li.pf-c-nav__item + li.pf-c-nav__item {
+  margin-top: 0;
+}
